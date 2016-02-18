@@ -25,6 +25,7 @@ class Application
 	public static function set_paths()
 	{
 		define("SITE_URL", "http://".$_SERVER['HTTP_HOST']."/");
+		define("PREFIX", "test_");
 	}
 
 	public static function Route()
@@ -32,6 +33,7 @@ class Application
 
 		if(self::Parseurl(1) != null)
 		{
+			//TEST1 TEst2
 			if(file_exists("core/controllers/controller_".self::Parseurl(1).".php"))
 			{
 				require("core/controllers/controller_".self::Parseurl(1).".php");

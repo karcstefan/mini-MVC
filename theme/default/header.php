@@ -10,6 +10,12 @@
     <title>%title%</title>
     <link href="<?php echo SITE_URL; ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo SITE_URL; ?>assets/style.css" rel="stylesheet">
+    <link href="<?php echo SITE_URL; ?>assets/css/prism.css" rel="stylesheet">
+    <link href="<?php echo SITE_URL; ?>assets/css/bootstrap-treeview.css" rel="stylesheet">
+    <style>
+    .jumbotron p { font-size: 13px;}
+    </style>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,7 +38,18 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="<?php echo SITE_URL; ?>">Home</a></li>
-            <li><a href="<?php echo SITE_URL."about";?>">About Us</a></li>
+            <li><a href="<?php echo SITE_URL."about";?>">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">OO Patterns <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/adapter">Adapter</a></li>
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/factory">Factory</a></li>
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/lawofdemeter">Law Of Demeter</a></li>
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/polymorphism">Polymorphism</a></li>
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/singleton">Singleton</a></li>
+                <li><a href="<?php echo SITE_URL; ?>oopatterns/traits">Traits</a></li>
+              </ul>
+            </li>
             <?php if($_SESSION[PREFIX.'logged']) { ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
@@ -53,4 +70,4 @@
     <div class="container">
 
       <div class="jumbotron clearfix">
-          <h1>%secondary%</h1>
+          <h2>%secondary%</h2>
